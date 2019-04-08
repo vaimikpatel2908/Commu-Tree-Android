@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="horizontal"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<ImageView 
+		android:id="@+id/userImg"
+		android:layout_width="70dp"
+		android:layout_height="50dp"
+		android:layout_marginLeft="7dp"
+		android:layout_marginTop="2dp"
+		android:src="@drawable/icon8"
+	/>
+<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+		
+		<TextView 
+			android:id="@+id/usernameTxt"
+			android:layout_width="295dp"
+			android:layout_height="17dp"
+			android:layout_marginLeft="5dp"
+			android:layout_marginTop="2dp"
+			android:text="Name"
+			android:textSize="15dp"
+		/>
+	
+		<!-- <TextView 
+			android:id="@+id/emailTxt"
+			android:layout_width="295dp"
+			android:layout_height="13dp"
+			android:layout_marginLeft="5dp"
+			android:layout_marginTop="2dp"
+			android:text="Address"
+			android:textSize="10dp"
+		/>	
+		<Button 
+			android:id="@+id/AddFavouries"
+			android:layout_width="100dp"
+			android:layout_height="35dp"
+			android:text="Add to Friends"
+			android:textSize="7dp"
+			android:textColor="#000000"
+		/>
+		<TextView 
+			android:id="@+id/userIdTxt"
+			android:layout_width="0dp"
+			android:layout_height="0dp"
+			android:visibility="invisible"
+		/>
+		--> 
+
+	</LinearLayout>
+
+</LinearLayout>

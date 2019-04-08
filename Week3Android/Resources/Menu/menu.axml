@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<menu xmlns:android="http://schemas.android.com/apk/res/android">  
+  
+  <!-- Add menu Item 1 -->  
+  <item android:id="@+id/menuItem1"  
+        android:icon="@android:drawable/ic_popup_sync" 
+        android:showAsAction="always"/>  
+    
+  <!-- Add menu Item 2 -->  
+  <item android:id="@+id/menuItem2"  
+        android:title="News"/>  
+	
+  <!-- Add menu Item 3 -->
+  <item android:id="@+id/menuItem3"  
+        android:title="About Us"/>  
+  
+  <!-- Add menu Item 4 -->  
+  <item android:id="@+id/menuItem4"  
+         android:title="Log Out"/>  
+  
+</menu>   

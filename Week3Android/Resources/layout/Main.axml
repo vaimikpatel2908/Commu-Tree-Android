@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:gravity="center">
+	<ImageView 
+		android:id="@+id/imgLogo"
+		android:layout_width="70dp"
+		android:layout_height="70dp"
+		android:src="@drawable/commutree"
+		android:layout_marginBottom="3dp"
+	/>
+	<EditText 
+		android:id="@+id/usernameTxt"
+		android:layout_height="60dp"
+		android:layout_width="250dp"
+		android:textSize="15dp"
+		android:hint="Enter Username"
+		android:background="@drawable/rounded_corners"/>
+
+	
+	<EditText 
+		android:id="@+id/emailTxt"
+		android:layout_height="60dp"
+		android:layout_width="250dp"
+		android:textSize="15dp"
+	android:hint="Enter Email"
+		android:background="@drawable/rounded_corners"/>
+
+	<EditText 
+		android:id="@+id/ageTxt"
+		android:layout_height="60dp"
+		android:layout_width="250dp"
+		android:textSize="15dp"
+	android:hint="Enter Age"
+		android:background="@drawable/rounded_corners"/>
+
+	<EditText 
+		android:id="@+id/passwordTxt"
+		android:layout_height="60dp"
+		android:layout_width="250dp"
+		android:textSize="15dp"
+	android:hint="Enter Password"
+	android:password="true"
+		android:background="@drawable/rounded_corners"
+	/>
+
+	<Button 
+		android:id="@+id/SignUpBtn"
+		android:layout_height="60dp"
+		android:layout_width="200dp"
+		android:layout_marginTop="10dp"
+		android:text="Register"
+		android:textSize="30dp"
+	></Button>
+
+	
+	<TextView 
+		android:id="@+id/LoginLink"
+		android:layout_height="20dp"
+		android:layout_width="200dp"
+		android:text="Already have account?Login Here"
+		android:textSize="12dp"
+		android:textStyle="bold"
+	android:textAlignment="textEnd"
+	android:layout_marginRight="-40dp"></TextView>
+</LinearLayout>

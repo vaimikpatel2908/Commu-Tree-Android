@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:gravity="center">
+	
+	<EditText 
+		android:id="@+id/usernameTxt"
+		android:layout_height="60dp"
+		android:layout_width="250dp"
+		android:textSize="15dp"
+		android:hint="Enter Username"
+		android:enabled="false"/>
+
+	
+	<EditText 
+		android:id="@+id/emailTxt"
+		android:layout_height="60dp"
+		android:layout_width="250dp"
+		android:textSize="15dp"
+		android:hint="Enter Email"
+		android:enabled="false"/>
+
+	<EditText 
+		android:id="@+id/ageTxt"
+		android:layout_height="60dp"
+		android:layout_width="250dp"
+		android:textSize="15dp"
+		android:hint="Enter Age"
+		android:enabled="false" />
+
+	<EditText 
+		android:id="@+id/passwordTxt"
+		android:layout_height="60dp"
+		android:layout_width="250dp"
+		android:textSize="15dp"
+		android:hint="Enter Password"
+		android:password="true"
+		android:enabled="false"
+	/>
+
+	<Button 
+		android:id="@+id/UpdateBtn"
+		android:layout_height="60dp"
+		android:layout_width="200dp"
+		android:layout_marginTop="10dp"
+		android:text="Edit"
+		android:textSize="30dp"
+	></Button>
+	
+	
+</LinearLayout>
