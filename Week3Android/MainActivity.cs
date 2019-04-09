@@ -9,7 +9,7 @@ using Java.Lang;
 
 namespace Week3Android
 {
-    [Activity(Label = "RegisterActivity")]
+    [Activity(Label = "Commu-Tree")]
     public class MainActivity : Activity
     {
         Button registerBtn;

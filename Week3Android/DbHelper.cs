@@ -72,9 +72,9 @@ namespace Week3Android
             var insertValue = "Insert into " + TableName + "("+ColumnID+","+ColumnImage+","+ColumnName+","+ColumnEmail+","+ColumnAge+","+ColumnPassword+") values('" + id + "',"+getImage()+",'" + username + "','" + emailID + "','" + age + "','" + password + "')";
             //ShowAlert("Data Inserted", "Id :" + id + "\nName :" + username + "\nEmail :" + emailID + "\nAge :" + age + "\nPassword :" + password);
 
-            Toast.MakeText(context, "Registered Successfully", ToastLength.Short).Show();
             //System.Console.WriteLine("MY SQL Insert " + insertValue);
             DbObj.ExecSQL(insertValue);
+            Toast.MakeText(context, "Registered Successfully", ToastLength.Short).Show();
         }
 
         public List<Person> SelectAllUsers(int userId)
@@ -130,8 +130,8 @@ namespace Week3Android
 
                     if (Email.Equals(email) && pwd.Equals(password))
                     {
-                        //System.Console.WriteLine(cursor.GetInt(0) + "---" + cursor.GetString(1) + "---" + cursor.GetString(2) + "---" + cursor.GetInt(3) + "---" + cursor.GetString(4));
-                        //ShowAlert("Data Verified", "Login Successfull");
+                        System.Console.WriteLine(cursor.GetInt(0) + "---" + cursor.GetString(1) + "---" + cursor.GetString(2) + "---" + cursor.GetInt(3) + "---" + cursor.GetString(4));
+                        ShowAlert("Data Verified", "Login Successfull");
                         Toast.MakeText(context, "Login Successfull", ToastLength.Short).Show();
                         return id;
                     }
@@ -140,7 +140,7 @@ namespace Week3Android
             else
             {
                 ShowAlert("Error 404", "Data Not Found");
-                //System.Console.WriteLine("MY Select Query : " + );
+                System.Console.WriteLine("MY Select Query : " + verifyCredentitalsQuery);
             }
 
             return 0;

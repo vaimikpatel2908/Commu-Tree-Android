@@ -8,7 +8,7 @@ using System;
 
 namespace Week3Android
 {
-    [Activity(Label = "UserDetailsActivity")]
+    [Activity(Label = "Commu-Tree")]
     public class UserDetailsActivity : Activity
     {
         Button favBtn;
@@ -123,5 +123,45 @@ namespace Week3Android
             };
         }
 
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            // set the menu layout on Main Activity  
+            MenuInflater.Inflate(Resource.Menu.menu, menu);
+            return base.OnCreateOptionsMenu(menu);
+        }
+
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            switch (item.ItemId)
+            {
+                case Resource.Id.menuItem1:
+                    {
+                        // add your code  
+                        return true;
+                    }
+                case Resource.Id.menuItem2:
+                    {
+                        //News Menu
+                        // add your code  
+                        return true;
+                    }
+                case Resource.Id.menuItem3:
+                    {
+                        //About Us Menu
+                        // add your code  
+                        return true;
+                    }
+                case Resource.Id.menuItem4:
+                    {
+                        //Logout Menu
+                        // add your code
+                        Intent loginIntent = new Intent(this, typeof(LoginActivity));
+                        StartActivity(loginIntent);
+                        return true;
+                    }
+            }
+
+            return base.OnOptionsItemSelected(item);
+        }
     }
 }

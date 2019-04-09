@@ -13,7 +13,7 @@ using Android.Widget;
 
 namespace Week3Android
 {
-    [Activity(Label = "UserListActivity")]
+    [Activity(Label = "Commu-Tree")]
     public class UserListActivity : Activity
     {
         DBHelper dBHelper;

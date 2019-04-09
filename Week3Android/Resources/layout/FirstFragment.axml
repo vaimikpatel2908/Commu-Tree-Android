@@ -6,18 +6,18 @@
 	
 	<Spinner 
 		android:id="@+id/fsSpinnerId"
-        android:layout_width="300dp"
-        android:layout_height="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
 		android:layout_marginTop="2dp"
-		android:background="#ecdfdf"
+		android:background="@drawable/rounded_corners"
 	/>
 
 	<SearchView 
 		android:id="@+id/fsSearchViewId"
-        android:layout_width="300dp"
-        android:layout_height="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
 		android:layout_marginTop="2dp"
-		android:background="#ecdfdf"
+		android:background="@drawable/rounded_corners"
 	/>
 
 	 <ListView
