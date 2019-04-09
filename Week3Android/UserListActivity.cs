@@ -74,8 +74,20 @@ namespace Week3Android
                     }
                 case Resource.Id.menuItem2:
                     {
-                        //News Menu
+                        //Seed Data Menu
                         // add your code  
+
+                        List<Person> listOfUsers = new Person().seedData();
+
+                        foreach (Person person in listOfUsers)
+                        {
+                            dBHelper.InsertQuery(person.username, person.email, person.age, person.password);
+                        }
+                        Toast.MakeText(this, "Data Seeded to application",ToastLength.Long);
+
+                        Intent intent = new Intent(this, typeof(UserListActivity));
+                        StartActivity(intent);
+
                         return true;
                     }
                 case Resource.Id.menuItem3:
@@ -85,6 +97,15 @@ namespace Week3Android
                         return true;
                     }
                 case Resource.Id.menuItem4:
+                    {
+                        //Clean Database Menu
+                        // add your code
+                        dBHelper.cleanData();
+                        Intent RegisterIntent = new Intent(this, typeof(MainActivity));
+                        StartActivity(RegisterIntent);
+                        return true;
+                    }
+                case Resource.Id.menuItem5:
                     {
                         //Logout Menu
                         // add your code

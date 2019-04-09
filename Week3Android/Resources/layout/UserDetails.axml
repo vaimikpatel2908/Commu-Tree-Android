@@ -2,42 +2,218 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-	<EditText 
-		android:id="@+id/usernameTxt"
-		android:layout_height="60dp"
+    android:layout_height="match_parent"
+	android:gravity="center">
+	<ImageView 
+		android:id="@+id/userImageView"
+		android:layout_height="100dp"
 		android:layout_width="250dp"
+		/>
+	<LinearLayout
+		android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="35dp"
+	android:gravity="center">
+	<TextView 
+		android:id="@+id/username"
+		android:layout_height="30dp"
+		android:layout_width="80dp"
+		android:textSize="15dp"
+		android:text="Name : "
+		android:textAlignment="viewEnd"
+		/>
+	<TextView 
+		android:id="@+id/usernameTxt"
+		android:layout_height="30dp"
+		android:layout_width="190dp"
 		android:textSize="15dp"
 		android:hint="Enter Username"
-		android:enabled="false"/>
-
+		/>
+		</LinearLayout>
 	
-	<EditText 
+	<LinearLayout
+		android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="35dp"
+	android:gravity="center">
+	<TextView 
+		android:id="@+id/email"
+		android:layout_height="30dp"
+		android:layout_width="80dp"
+		android:textSize="15dp"
+		android:text="Email : "
+		android:textAlignment="viewEnd"
+		/>
+		<TextView 
 		android:id="@+id/emailTxt"
-		android:layout_height="60dp"
-		android:layout_width="250dp"
+		android:layout_height="30dp"
+		android:layout_width="190dp"
 		android:textSize="15dp"
 		android:hint="Enter Email"
-		android:enabled="false"/>
-
-	<EditText 
+		/>
+	
+		</LinearLayout>
+	
+	<LinearLayout
+		android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="35dp"
+	android:gravity="center">
+	<TextView 
+		android:id="@+id/age"
+		android:layout_height="35dp"
+		android:layout_width="80dp"
+		android:textSize="15dp"
+		android:text="Age : "
+		android:textAlignment="viewEnd"
+		/>
+	<TextView 
 		android:id="@+id/ageTxt"
-		android:layout_height="60dp"
-		android:layout_width="250dp"
+		android:layout_height="35dp"
+		android:layout_width="190dp"
 		android:textSize="15dp"
 		android:hint="Enter Age"
-		android:enabled="false" />
-
-	<EditText 
-		android:id="@+id/passwordTxt"
-		android:layout_height="60dp"
-		android:layout_width="250dp"
+		 />
+	
+		</LinearLayout>
+	
+	<LinearLayout
+		android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="35dp"
+	android:gravity="center">
+	<TextView 
+		android:id="@+id/education"
+		android:layout_height="35dp"
+		android:layout_width="85dp"
+		android:textSize="15dp"
+		android:text="Education : "
+		android:textAlignment="viewEnd"
+		/>
+	<TextView 
+		android:id="@+id/educaionTxt"
+		android:layout_height="35dp"
+		android:layout_width="190dp"
 		android:textSize="15dp"
 		android:hint="Enter Password"
-		android:password="true"
-		android:enabled="false"
+		/>
+	
+		</LinearLayout>
+	
+	<LinearLayout
+		android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="35dp"
+	android:gravity="center">
+	<TextView 
+		android:id="@+id/profession"
+		android:layout_height="35dp"
+		android:layout_width="85dp"
+		android:textSize="15dp"
+		android:text="Profession : "
+		android:textAlignment="viewEnd"
+		/>
+		<TextView 
+		android:id="@+id/professionTxt"
+		android:layout_height="35dp"
+		android:layout_width="190dp"
+		android:textSize="15dp"
+		android:hint="Enter Password"
 	/>
-
+		</LinearLayout>
+	
+	<LinearLayout
+		android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="35dp"
+	android:gravity="center">
+	<TextView 
+		android:id="@+id/dob"
+		android:layout_height="35dp"
+		android:layout_width="80dp"
+		android:textSize="15dp"
+		android:text="DOB : "
+		android:textAlignment="viewEnd"
+		/>
+		<TextView 
+		android:id="@+id/dobTxt"
+		android:layout_height="35dp"
+		android:layout_width="190dp"
+		android:textSize="15dp"
+		android:hint="Enter Password"
+		
+	/>
+		</LinearLayout>
+	
+	<LinearLayout
+		android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="35dp"
+	android:gravity="center">
+	<TextView 
+		android:id="@+id/mrgStatus"
+		android:layout_height="35dp"
+		android:layout_width="80dp"
+		android:textSize="15dp"
+		android:text="Status : "
+		android:textAlignment="viewEnd"
+		/>
+		<TextView 
+		android:id="@+id/mrgStatusTxt"
+		android:layout_height="35dp"
+		android:layout_width="190dp"
+		android:textSize="15dp"
+		android:hint="Enter Password"
+	/>
+	
+		</LinearLayout>
+	
+	<LinearLayout
+		android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="35dp"
+	android:gravity="center">
+	<TextView 
+		android:id="@+id/address"
+		android:layout_height="35dp"
+		android:layout_width="80dp"
+		android:textSize="15dp"
+		android:text="Address : "
+		android:textAlignment="viewEnd"
+		/>
+		<TextView 
+		android:id="@+id/addressTxt"
+		android:layout_height="35dp"
+		android:layout_width="190dp"
+		android:textSize="15dp"
+		android:hint="Enter Password"
+		
+	/>
+		
+		</LinearLayout>
+	
+	<LinearLayout
+		android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="35dp"
+	android:gravity="center">
+	<TextView 
+		android:id="@+id/city"
+		android:layout_height="35dp"
+		android:layout_width="80dp"
+		android:textSize="15dp"
+		android:text="City : "
+		android:textAlignment="viewEnd"
+		/>
+		<TextView 
+		android:id="@+id/cityTxt"
+		android:layout_height="30dp"
+		android:layout_width="190dp"
+		android:textSize="15dp"
+		android:hint="Enter Password"
+		
+	/>
+		</LinearLayout>
 	<Button 
 		android:id="@+id/AddToFavorites"
 		android:layout_height="60dp"

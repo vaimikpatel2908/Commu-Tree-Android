@@ -2369,8 +2369,8 @@ namespace Week3Android
 			// aapt resource value: 0x7f080032
 			public const int ALT = 2131230770;
 			
-			// aapt resource value: 0x7f0800bd
-			public const int AddToFavorites = 2131230909;
+			// aapt resource value: 0x7f0800cd
+			public const int AddToFavorites = 2131230925;
 			
 			// aapt resource value: 0x7f080033
 			public const int CTRL = 2131230771;
@@ -2462,6 +2462,15 @@ namespace Week3Android
 			// aapt resource value: 0x7f080027
 			public const int add = 2131230759;
 			
+			// aapt resource value: 0x7f0800c9
+			public const int address = 2131230921;
+			
+			// aapt resource value: 0x7f0800ca
+			public const int addressTxt = 2131230922;
+			
+			// aapt resource value: 0x7f0800c0
+			public const int age = 2131230912;
+			
 			// aapt resource value: 0x7f08008d
 			public const int ageTxt = 2131230861;
 			
@@ -2509,6 +2518,12 @@ namespace Week3Android
 			
 			// aapt resource value: 0x7f0800b3
 			public const int chronometer = 2131230899;
+			
+			// aapt resource value: 0x7f0800cb
+			public const int city = 2131230923;
+			
+			// aapt resource value: 0x7f0800cc
+			public const int cityTxt = 2131230924;
 			
 			// aapt resource value: 0x7f08004e
 			public const int clip_horizontal = 2131230798;
@@ -2561,8 +2576,23 @@ namespace Week3Android
 			// aapt resource value: 0x7f080020
 			public const int disableHome = 2131230752;
 			
+			// aapt resource value: 0x7f0800c5
+			public const int dob = 2131230917;
+			
+			// aapt resource value: 0x7f0800c6
+			public const int dobTxt = 2131230918;
+			
 			// aapt resource value: 0x7f08007e
 			public const int edit_query = 2131230846;
+			
+			// aapt resource value: 0x7f0800c2
+			public const int educaionTxt = 2131230914;
+			
+			// aapt resource value: 0x7f0800c1
+			public const int education = 2131230913;
+			
+			// aapt resource value: 0x7f0800bf
+			public const int email = 2131230911;
 			
 			// aapt resource value: 0x7f08008c
 			public const int emailTxt = 2131230860;
@@ -2603,8 +2633,8 @@ namespace Week3Android
 			// aapt resource value: 0x7f080058
 			public const int forever = 2131230808;
 			
-			// aapt resource value: 0x7f0800be
-			public const int frameLayout1 = 2131230910;
+			// aapt resource value: 0x7f0800ce
+			public const int frameLayout1 = 2131230926;
 			
 			// aapt resource value: 0x7f08009f
 			public const int fsSearchViewId = 2131230879;
@@ -2666,23 +2696,26 @@ namespace Week3Android
 			// aapt resource value: 0x7f080061
 			public const int list_item = 2131230817;
 			
-			// aapt resource value: 0x7f0800c0
-			public const int masked = 2131230912;
+			// aapt resource value: 0x7f0800d0
+			public const int masked = 2131230928;
 			
 			// aapt resource value: 0x7f0800ad
 			public const int media_actions = 2131230893;
 			
-			// aapt resource value: 0x7f0800c1
-			public const int menuItem1 = 2131230913;
+			// aapt resource value: 0x7f0800d1
+			public const int menuItem1 = 2131230929;
 			
-			// aapt resource value: 0x7f0800c2
-			public const int menuItem2 = 2131230914;
+			// aapt resource value: 0x7f0800d2
+			public const int menuItem2 = 2131230930;
 			
-			// aapt resource value: 0x7f0800c3
-			public const int menuItem3 = 2131230915;
+			// aapt resource value: 0x7f0800d3
+			public const int menuItem3 = 2131230931;
 			
-			// aapt resource value: 0x7f0800c4
-			public const int menuItem4 = 2131230916;
+			// aapt resource value: 0x7f0800d4
+			public const int menuItem4 = 2131230932;
+			
+			// aapt resource value: 0x7f0800d5
+			public const int menuItem5 = 2131230933;
 			
 			// aapt resource value: 0x7f0800bc
 			public const int message = 2131230908;
@@ -2692,6 +2725,12 @@ namespace Week3Android
 			
 			// aapt resource value: 0x7f080053
 			public const int mini = 2131230803;
+			
+			// aapt resource value: 0x7f0800c7
+			public const int mrgStatus = 2131230919;
+			
+			// aapt resource value: 0x7f0800c8
+			public const int mrgStatusTxt = 2131230920;
 			
 			// aapt resource value: 0x7f080028
 			public const int multiply = 2131230760;
@@ -2731,6 +2770,12 @@ namespace Week3Android
 			
 			// aapt resource value: 0x7f08004d
 			public const int pin = 2131230797;
+			
+			// aapt resource value: 0x7f0800c3
+			public const int profession = 2131230915;
+			
+			// aapt resource value: 0x7f0800c4
+			public const int professionTxt = 2131230916;
 			
 			// aapt resource value: 0x7f080006
 			public const int progress_circular = 2131230726;
@@ -2939,8 +2984,14 @@ namespace Week3Android
 			// aapt resource value: 0x7f080026
 			public const int useLogo = 2131230758;
 			
+			// aapt resource value: 0x7f0800bd
+			public const int userImageView = 2131230909;
+			
 			// aapt resource value: 0x7f0800a6
 			public const int userImg = 2131230886;
+			
+			// aapt resource value: 0x7f0800be
+			public const int username = 2131230910;
 			
 			// aapt resource value: 0x7f08008b
 			public const int usernameTxt = 2131230859;
@@ -2948,8 +2999,8 @@ namespace Week3Android
 			// aapt resource value: 0x7f080016
 			public const int view_offset_helper = 2131230742;
 			
-			// aapt resource value: 0x7f0800bf
-			public const int visible = 2131230911;
+			// aapt resource value: 0x7f0800cf
+			public const int visible = 2131230927;
 			
 			// aapt resource value: 0x7f08003c
 			public const int withText = 2131230780;

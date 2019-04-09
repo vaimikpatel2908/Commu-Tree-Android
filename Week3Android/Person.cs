@@ -68,10 +68,30 @@ namespace Week3Android
             this.profession = profession;
         }
 
+
+        public List<Person> seedData()
+        {
+            usersList.Add(new Person() { username = "Vaimik Patel",   email="vaimik@gmail.com",     age = 25, password = "vaimik" });
+            usersList.Add(new Person() { username = "Chirag Vira",    email = "chirag@gmail.com",   age = 20, password = "chirag" });
+            usersList.Add(new Person() { username = "Milen Louis",    email = "milen@gmail.com",    age = 27, password = "milen" });
+            usersList.Add(new Person() { username = "Meenakshi Sethi",email = "meenakshi@gmail.com",age = 18, password = "meenakshi" });
+            usersList.Add(new Person() { username = "Kushal Sarawagi",email = "kushal@gmail.com",   age = 22, password = "kushal" });
+            usersList.Add(new Person() { username = "Ami Jani",       email = "ami@gmail.com",      age = 12, password = "ami" });
+            usersList.Add(new Person() { username = "Shreya Patel",   email = "shreya@gmail.com",   age = 23, password = "shreya" });
+            usersList.Add(new Person() { username = "Pooja Patel",    email = "pooja@gmail.com",    age = 24, password = "pooja" });
+            usersList.Add(new Person() { username = "Akif Shaikh",    email = "akif@gmail.com",     age = 28, password = "akif" });
+
+            return usersList;
+        }
+
+
+
+        //Not using Now
         public void addToList(Person person)
         {
             usersList.Add(person);
         }
+
 
 
     }

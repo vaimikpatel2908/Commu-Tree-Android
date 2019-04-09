@@ -11,7 +11,7 @@ namespace Week3Android
     public class DBHelper : SQLiteOpenHelper
     {
         public Context context;
-        private static string _DatabaseName = "mydatabase.db";
+        private static string _DatabaseName = "CommutreeDb.db";
         private const string TableName = "registrationtable";
         private const string ColumnID = "id";
         private const string ColumnImage = "image";
@@ -383,6 +383,17 @@ namespace Week3Android
                     return imageId;
             }
             return imageId;
+        }
+
+
+        public void cleanData()
+        {
+            DbObj.ExecSQL(DeleteQuery);
+            DbObj.ExecSQL(FavoritesDeleteQuery);
+            DbObj.ExecSQL(CreateRegistrationTableQuery);
+            DbObj.ExecSQL(CreateFavouritesTableQuery);
+
+            Toast.MakeText(context, "Data Cleared", ToastLength.Long);
         }
     }
 }
