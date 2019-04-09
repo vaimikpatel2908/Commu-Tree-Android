@@ -85,7 +85,7 @@ namespace Week3Android
 
             var newValue = e.NewText.Trim();
             // "None","Name", "City", "Education", "Age" 
-            if (selectedSpinnerText == "None" || newValue != "")
+            if (selectedSpinnerText == "None" || newValue == "")
             {
                 filteredList = usersList;
                 //var filteredAdapter = new MyCustomAdapter(context, usersList);
@@ -164,15 +164,12 @@ namespace Week3Android
                 LoadData = false;
                 Toast.MakeText(context, "No Search Result Found", ToastLength.Short);
             }
-
-
             if (LoadData)
             {
                 var filteredAdapter = new MyCustomAdapter(context, filteredList);
 
                 myListView.SetAdapter(filteredAdapter);
             }
-
         }
     }
 }

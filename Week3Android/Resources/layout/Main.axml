@@ -3,7 +3,8 @@
 	android:orientation="vertical"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
-	android:gravity="center">
+	android:gravity="center"
+	android:background="@drawable/app_back1">
 	<ImageView 
 		android:id="@+id/imgLogo"
 		android:layout_width="70dp"
@@ -17,7 +18,8 @@
 		android:layout_width="250dp"
 		android:textSize="15dp"
 		android:hint="Enter Username"
-		android:background="@drawable/rounded_corners"/>
+		android:background="@drawable/rounded_corners"
+		android:layout_marginBottom="2dp"/>
 
 	
 	<EditText 
@@ -26,7 +28,8 @@
 		android:layout_width="250dp"
 		android:textSize="15dp"
 	android:hint="Enter Email"
-		android:background="@drawable/rounded_corners"/>
+		android:background="@drawable/rounded_corners"
+		android:layout_marginBottom="2dp"/>
 
 	<EditText 
 		android:id="@+id/ageTxt"
@@ -34,7 +37,8 @@
 		android:layout_width="250dp"
 		android:textSize="15dp"
 	android:hint="Enter Age"
-		android:background="@drawable/rounded_corners"/>
+		android:background="@drawable/rounded_corners"
+		android:layout_marginBottom="2dp"/>
 
 	<EditText 
 		android:id="@+id/passwordTxt"
@@ -58,11 +62,12 @@
 	
 	<TextView 
 		android:id="@+id/LoginLink"
-		android:layout_height="20dp"
-		android:layout_width="200dp"
+		android:layout_height="25dp"
+		android:layout_width="300dp"
 		android:text="Already have account?Login Here"
-		android:textSize="12dp"
+		android:textSize="17dp"
 		android:textStyle="bold"
-	android:textAlignment="textEnd"
-	android:layout_marginRight="-40dp"></TextView>
+	android:textAlignment="center"
+	android:layout_marginTop="5dp"
+	android:textColor="#ffffff"></TextView>
 </LinearLayout>

@@ -3,7 +3,7 @@
 	android:orientation="vertical"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
-	android:background="#808080"
+	android:background="@drawable/appback"
 	android:gravity="center">
 	<ImageView 
 		android:id="@+id/imgLogo"
@@ -40,11 +40,12 @@
 		></Button>
 	<TextView 
 		android:id="@+id/createAccLink"
-		android:layout_height="20dp"
-		android:layout_width="200dp"
-		android:text="Create New Account"
-		android:textSize="12dp"
+		android:layout_height="30dp"
+		android:layout_width="360dp"
+		android:text="Not registered yet? Create New Account"
+		android:textSize="17dp"
 		android:textStyle="bold"
-	android:textAlignment="textEnd"
-	android:layout_marginRight="-40dp"></TextView>
+		android:textAlignment="center"
+		android:textColor="#ffffff"
+	></TextView>
 </LinearLayout>

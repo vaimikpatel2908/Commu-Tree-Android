@@ -65,7 +65,6 @@ namespace Week3Android
             }
             else
             {
-
                 int status = dBHelper.checkRequestStatus(userId, user.uId);
 
                 //pending Request
