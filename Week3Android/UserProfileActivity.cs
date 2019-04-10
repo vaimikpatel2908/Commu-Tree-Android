@@ -114,5 +114,74 @@ namespace Week3Android
                 }
             };
         }
-    }
+
+
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            // set the menu layout on Main Activity  
+            MenuInflater.Inflate(Resource.Menu.menu, menu);
+            return base.OnCreateOptionsMenu(menu);
+        }
+
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            switch (item.ItemId)
+            {
+                case Resource.Id.menuItem1:
+                    {
+                        // add your code 
+                        Intent intent = new Intent(this, typeof(UserListActivity));
+                        StartActivity(intent);
+                        return true;
+                    }
+                case Resource.Id.menuItem2:
+                    {
+                        //Seed Data Menu
+                        // add your code  
+
+                        List<Person> listOfUsers = new Person().seedData();
+
+                        foreach (Person person in listOfUsers)
+                        {
+                            dBHelper.InsertQuery(person.username, person.email, person.age, person.password);
+                        }
+                        Toast.MakeText(this, "Data Seeded to application", ToastLength.Long);
+
+                        Intent intent = new Intent(this, typeof(UserListActivity));
+                        StartActivity(intent);
+
+                        return true;
+                    }
+                case Resource.Id.menuItem3:
+                    {
+                        //About Us Menu
+                        // add your code  
+                        return true;
+                    }
+                case Resource.Id.menuItem4:
+                    {
+                        //Clean Database Menu
+                        // add your code
+                        dBHelper.cleanData();
+                        Intent RegisterIntent = new Intent(this, typeof(MainActivity));
+                        StartActivity(RegisterIntent);
+                        return true;
+                    }
+                case Resource.Id.menuItem5:
+                    {
+                        //Logout Menu
+                        // add your code
+                        Intent loginIntent = new Intent(this, typeof(LoginActivity));
+                        StartActivity(loginIntent);
+                        return true;
+                    }
+                case Resource.Id.menuItem6:
+                    {
+                        //Home Menu
+                        // add your code
+                        Intent intent = new Intent(this, typeof(UserListActivity));
+                        StartActivity(intent);
+                        return true;
+                    }
+            }
 }

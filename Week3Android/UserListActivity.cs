@@ -69,7 +69,7 @@ namespace Week3Android
             {
                 case Resource.Id.menuItem1:
                     {
-                        // add your code   
+                        // add your code 
                         Intent intent = new Intent(this, typeof(UserListActivity));
                         StartActivity(intent);
                         return true;
@@ -83,9 +83,9 @@ namespace Week3Android
 
                         foreach (Person person in listOfUsers)
                         {
-                            dBHelper.SeedData(person.username, person.email, person.age, person.password,person.dob,person.address,person.city,person.maritalStatus,person.education,person.profession);
+                            dBHelper.InsertQuery(person.username, person.email, person.age, person.password);
                         }
-                        Toast.MakeText(this, "Data Seeded to application",ToastLength.Long);
+                        Toast.MakeText(this, "Data Seeded to application", ToastLength.Long);
 
                         Intent intent = new Intent(this, typeof(UserListActivity));
                         StartActivity(intent);
@@ -95,9 +95,7 @@ namespace Week3Android
                 case Resource.Id.menuItem3:
                     {
                         //About Us Menu
-                        // add your code
-                        Intent intent = new Intent(this, typeof(UserProfileActivity));
-                        StartActivity(intent);
+                        // add your code  
                         return true;
                     }
                 case Resource.Id.menuItem4:
@@ -117,9 +115,16 @@ namespace Week3Android
                         StartActivity(loginIntent);
                         return true;
                     }
-            }
+                case Resource.Id.menuItem6:
+                    {
+                        //Home Menu
+                        // add your code
+                        Intent intent = new Intent(this, typeof(UserListActivity));
+                        StartActivity(intent);
+                        return true;
+                    }
 
-            return base.OnOptionsItemSelected(item);
+                    return base.OnOptionsItemSelected(item);
         }
 
         void AddTabToActionBar(string tabTitle, int ImageId)

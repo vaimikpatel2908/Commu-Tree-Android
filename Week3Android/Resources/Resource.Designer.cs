@@ -2735,17 +2735,20 @@ namespace Week3Android
 			// aapt resource value: 0x7f0800d3
 			public const int menuItem1 = 2131230931;
 			
-			// aapt resource value: 0x7f0800d4
-			public const int menuItem2 = 2131230932;
-			
 			// aapt resource value: 0x7f0800d5
-			public const int menuItem3 = 2131230933;
+			public const int menuItem2 = 2131230933;
 			
 			// aapt resource value: 0x7f0800d6
-			public const int menuItem4 = 2131230934;
+			public const int menuItem3 = 2131230934;
 			
 			// aapt resource value: 0x7f0800d7
-			public const int menuItem5 = 2131230935;
+			public const int menuItem4 = 2131230935;
+			
+			// aapt resource value: 0x7f0800d8
+			public const int menuItem5 = 2131230936;
+			
+			// aapt resource value: 0x7f0800d4
+			public const int menuItem6 = 2131230932;
 			
 			// aapt resource value: 0x7f0800bc
 			public const int message = 2131230908;

@@ -4,8 +4,12 @@
   <!-- Add menu Item 1 -->  
   <item android:id="@+id/menuItem1"  
         android:icon="@android:drawable/ic_popup_sync" 
-        android:showAsAction="always"/>  
-    
+        android:showAsAction="always"/>
+  
+  <!-- Add menu Item 6 -->
+  <item android:id="@+id/menuItem6"
+        android:title="Home"/>
+
   <!-- Add menu Item 2 -->  
   <item android:id="@+id/menuItem2"  
         android:title="Seed Data"/>  
@@ -14,11 +18,11 @@
   <item android:id="@+id/menuItem3"  
         android:title="View Profile"/>
 
-  <!-- Add menu Item 3 -->
+  <!-- Add menu Item 4 -->
   <item android:id="@+id/menuItem4"
         android:title="Clean Data"/>
 
-  <!-- Add menu Item 4 -->  
+  <!-- Add menu Item 5 -->  
   <item android:id="@+id/menuItem5"  
          android:title="Log Out"/>  
   

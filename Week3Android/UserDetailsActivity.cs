@@ -211,6 +211,14 @@ namespace Week3Android
                         StartActivity(loginIntent);
                         return true;
                     }
+                case Resource.Id.menuItem6:
+                    {
+                        //Home Menu
+                        // add your code
+                        Intent intent = new Intent(this, typeof(UserListActivity));
+                        StartActivity(intent);
+                        return true;
+                    }
             }
 
             return base.OnOptionsItemSelected(item);
