@@ -12,7 +12,7 @@
 	
   <!-- Add menu Item 3 -->
   <item android:id="@+id/menuItem3"  
-        android:title="About Us"/>
+        android:title="View Profile"/>
 
   <!-- Add menu Item 3 -->
   <item android:id="@+id/menuItem4"

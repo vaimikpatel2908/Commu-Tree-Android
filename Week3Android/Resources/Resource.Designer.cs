@@ -2645,8 +2645,8 @@ namespace Week3Android
 			// aapt resource value: 0x7f080058
 			public const int forever = 2131230808;
 			
-			// aapt resource value: 0x7f0800ce
-			public const int frameLayout1 = 2131230926;
+			// aapt resource value: 0x7f0800cf
+			public const int frameLayout1 = 2131230927;
 			
 			// aapt resource value: 0x7f08009f
 			public const int fsSearchViewId = 2131230879;
@@ -2708,26 +2708,26 @@ namespace Week3Android
 			// aapt resource value: 0x7f080061
 			public const int list_item = 2131230817;
 			
-			// aapt resource value: 0x7f0800d0
-			public const int masked = 2131230928;
+			// aapt resource value: 0x7f0800d1
+			public const int masked = 2131230929;
 			
 			// aapt resource value: 0x7f0800ad
 			public const int media_actions = 2131230893;
 			
-			// aapt resource value: 0x7f0800d1
-			public const int menuItem1 = 2131230929;
-			
 			// aapt resource value: 0x7f0800d2
-			public const int menuItem2 = 2131230930;
+			public const int menuItem1 = 2131230930;
 			
 			// aapt resource value: 0x7f0800d3
-			public const int menuItem3 = 2131230931;
+			public const int menuItem2 = 2131230931;
 			
 			// aapt resource value: 0x7f0800d4
-			public const int menuItem4 = 2131230932;
+			public const int menuItem3 = 2131230932;
 			
 			// aapt resource value: 0x7f0800d5
-			public const int menuItem5 = 2131230933;
+			public const int menuItem4 = 2131230933;
+			
+			// aapt resource value: 0x7f0800d6
+			public const int menuItem5 = 2131230934;
 			
 			// aapt resource value: 0x7f0800bc
 			public const int message = 2131230908;
@@ -2776,6 +2776,9 @@ namespace Week3Android
 			
 			// aapt resource value: 0x7f08000b
 			public const int parent_matrix = 2131230731;
+			
+			// aapt resource value: 0x7f0800ce
+			public const int password = 2131230926;
 			
 			// aapt resource value: 0x7f08008e
 			public const int passwordTxt = 2131230862;
@@ -3011,8 +3014,8 @@ namespace Week3Android
 			// aapt resource value: 0x7f080016
 			public const int view_offset_helper = 2131230742;
 			
-			// aapt resource value: 0x7f0800cf
-			public const int visible = 2131230927;
+			// aapt resource value: 0x7f0800d0
+			public const int visible = 2131230928;
 			
 			// aapt resource value: 0x7f08003c
 			public const int withText = 2131230780;
@@ -3281,7 +3284,10 @@ namespace Week3Android
 			public const int UserDetails = 2130968643;
 			
 			// aapt resource value: 0x7f040044
-			public const int UsersList = 2130968644;
+			public const int UserProfile = 2130968644;
+			
+			// aapt resource value: 0x7f040045
+			public const int UsersList = 2130968645;
 			
 			static Layout()
 			{

@@ -69,7 +69,9 @@ namespace Week3Android
             {
                 case Resource.Id.menuItem1:
                     {
-                        // add your code  
+                        // add your code   
+                        Intent intent = new Intent(this, typeof(UserListActivity));
+                        StartActivity(intent);
                         return true;
                     }
                 case Resource.Id.menuItem2:
@@ -81,7 +83,7 @@ namespace Week3Android
 
                         foreach (Person person in listOfUsers)
                         {
-                            dBHelper.InsertQuery(person.username, person.email, person.age, person.password);
+                            dBHelper.SeedData(person.username, person.email, person.age, person.password,person.dob,person.address,person.city,person.maritalStatus,person.education,person.profession);
                         }
                         Toast.MakeText(this, "Data Seeded to application",ToastLength.Long);
 
@@ -93,7 +95,9 @@ namespace Week3Android
                 case Resource.Id.menuItem3:
                     {
                         //About Us Menu
-                        // add your code  
+                        // add your code
+                        Intent intent = new Intent(this, typeof(UserProfileActivity));
+                        StartActivity(intent);
                         return true;
                     }
                 case Resource.Id.menuItem4:

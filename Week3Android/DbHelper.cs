@@ -26,9 +26,9 @@ namespace Week3Android
         private const string ColumnProfession = "profession";
         private const string ColumnEducation = "education";
 
-        public const string CreateRegistrationTableQuery = "Create Table " + TableName + " ( " + ColumnID + " Integer primary key autoincrement, " + ColumnImage + " int," + ColumnName + " Text," + ColumnEmail + " Text," + ColumnAge + " Integer," + ColumnPassword + " Text ,"+ ColumnDob +"Text , "
-            + ColumnAddress+"Text , "+ ColumnCity+"Text , "+ColumnMaritalStatus +"Text , "+ColumnProfession+
-            "Text , "+ColumnEducation+")";
+        public const string CreateRegistrationTableQuery = "Create Table " + TableName + " ( " + ColumnID + " Integer primary key autoincrement, " + ColumnImage + " int," + ColumnName + " Text," + ColumnEmail + " Text," + ColumnAge + " Integer," + ColumnPassword + " Text ,"+ ColumnDob +" Text , "
+            + ColumnAddress+" Text , "+ ColumnCity+" Text , "+ColumnMaritalStatus +" Text , "+ColumnProfession+
+            " Text , "+ColumnEducation+" Text)";
 
         public const string DeleteQuery = "Drop Table If Exists " + TableName;
 
@@ -188,9 +188,9 @@ namespace Week3Android
         /// <param name="username"></param>
         /// <param name="age"></param>
         /// <param name="password"></param>
-        public void updateUserDataByUserId(int uID, string username, int age, string dob, string address, string city, string maritalStatus, string profession, string education)
+        public void updateUserDataByUserId(int uID, string username, int age,string password, string dob, string address, string city, string maritalStatus, string profession, string education)
         {
-            string updateQuery = "Update " + TableName + " set " + ColumnName + "='" + username + "',"
+            string updateQuery = "Update " + TableName + " set " + ColumnName + "='" + username + "',"+ColumnPassword+"='"+password +"',"
                 + ColumnAge + "=" + age + "," + ColumnDob + "='" + dob + "'," + ColumnAddress + "='" + address + "',"
                 + ColumnCity + "='" + city + "'," + ColumnMaritalStatus + "='" + maritalStatus + "',"
                 + ColumnProfession + "='" + profession + "'," + ColumnEducation + "='" + education + "'" +
@@ -385,6 +385,18 @@ namespace Week3Android
             return imageId;
         }
 
+        public void SeedData(string username, string emailID, int age, string password,string dob,string address,string city,string maritalStatus,string education,string profession)
+        {
+            Random rnd = new Random();
+            var id = rnd.Next(1, 1000);
+
+            var insertValue = "Insert into " + TableName + "(" + ColumnID + "," + ColumnImage + "," + ColumnName + "," + ColumnEmail + "," + ColumnAge + "," + ColumnPassword + "," + ColumnDob + "," + ColumnAddress + "," + ColumnCity + "," + ColumnMaritalStatus + "," + ColumnEducation + "," + ColumnProfession + ") values('" + id + "'," + getImage() + ",'" + username + "','" + emailID + "','" + age + "','" + password + "','"+dob+"','"+address+ "','" + city + "','" + maritalStatus + "','" + profession + "','" + education + "')";
+            //ShowAlert("Data Inserted", "Id :" + id + "\nName :" + username + "\nEmail :" + emailID + "\nAge :" + age + "\nPassword :" + password);
+
+            System.Console.WriteLine("MY SQL Insert " + insertValue);
+            DbObj.ExecSQL(insertValue);
+            //Toast.MakeText(context, "Data Added Successfully", ToastLength.Short).Show();
+        }
 
         public void cleanData()
         {

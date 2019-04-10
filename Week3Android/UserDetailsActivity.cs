@@ -24,7 +24,7 @@ namespace Week3Android
             // Create your application here
             SetContentView(Resource.Layout.UserDetails);
             dBHelper = new DBHelper(this);
-            userImageView= FindViewById<ImageView>(Resource.Id.userImageView);
+            userImageView = FindViewById<ImageView>(Resource.Id.userImageView);
             usernameTxt = FindViewById<TextView>(Resource.Id.usernameTxt);
             emailTxt = FindViewById<TextView>(Resource.Id.emailTxt);
             ageTxt = FindViewById<TextView>(Resource.Id.ageTxt);
@@ -56,6 +56,8 @@ namespace Week3Android
             mrgStatusTxt.Text = user.maritalStatus;
             educationTxt.Text = user.education;
             professionTxt.Text = user.profession;
+            userImageView.SetImageResource(user.userImage);
+
 
             if (dBHelper.HasRequest(favUserId, userId))
             {
@@ -147,6 +149,7 @@ namespace Week3Android
                     }
                 }
             };
+
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
@@ -162,7 +165,9 @@ namespace Week3Android
             {
                 case Resource.Id.menuItem1:
                     {
-                        // add your code  
+                        // add your code 
+                        Intent intent = new Intent(this, typeof(UserListActivity));
+                        StartActivity(intent);
                         return true;
                     }
                 case Resource.Id.menuItem2:
@@ -211,4 +216,6 @@ namespace Week3Android
             return base.OnOptionsItemSelected(item);
         }
     }
+
+    
 }
