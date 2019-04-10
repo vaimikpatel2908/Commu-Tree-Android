@@ -7,7 +7,7 @@ namespace Week3Android
         public string address { get; set; }
         public string latitude { get; set; }
         public string longitude { get; set; }
-        List<Coordinates> coordinates = new List<Coordinates>();
+        public List<Coordinates> coordinates = new List<Coordinates>();
 
         public Coordinates()
         {
@@ -19,7 +19,6 @@ namespace Week3Android
             this.address = address;
             this.latitude = latitude;
             this.longitude = longitude;
-            this.coordinates = getCoordinates();
         }
 
 

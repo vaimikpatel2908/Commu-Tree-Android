@@ -13,7 +13,7 @@ namespace Week3Android
     public class UserDetailsActivity : Activity
     {
         Button favBtn;
-        ImageView userImageView;
+        ImageView userImageView, mailImg, locationImg;
         TextView usernameTxt, emailTxt, ageTxt, dobTxt, addressTxt, cityTxt, mrgStatusTxt, educationTxt, professionTxt;
         DBHelper dBHelper;
 
@@ -36,6 +36,8 @@ namespace Week3Android
             professionTxt = FindViewById<TextView>(Resource.Id.professionTxt);
             favBtn = FindViewById<Button>(Resource.Id.AddToFavorites);
 
+            mailImg = FindViewById<ImageView>(Resource.Id.mailImg);
+            locationImg = FindViewById<ImageView>(Resource.Id.locationImg);
 
             ISharedPreferences sharedPreferences = PreferenceManager.GetDefaultSharedPreferences(this);
             int userId = sharedPreferences.GetInt("userId", 0);
@@ -149,7 +151,52 @@ namespace Week3Android
                     }
                 }
             };
+            mailImg.Click += delegate
+            {
+                var email = new Intent(Android.Content.Intent.ActionSend);
+                email.PutExtra(Android.Content.Intent.ExtraEmail, new string[] {
+            user.email
+        });
+                email.PutExtra(Android.Content.Intent.ExtraCc, new string[] {
+            "vaimikpatel2908@gmail.com"
+        });
+                email.PutExtra(Android.Content.Intent.ExtraSubject, "Hello"+user.username);
+                email.PutExtra(Android.Content.Intent.ExtraText, "Hello "+ user.username+" This is mail from commu-tree application!");
+                email.SetType("message/rfc822");
+                Intent chooser = Intent.CreateChooser(email, "Send Mail");
+                StartActivity(chooser);
+            };
 
+            locationImg.Click += delegate
+            {
+                redirectToMap(user.address);
+            };
+
+        }
+
+        public void redirectToMap(string address)
+        {
+            string[] coordinate = new string[2];
+            Coordinates coordinates = new Coordinates();
+
+            bool isFound = false;
+            foreach (var item in coordinates.coordinates)
+            {
+                if (item.address.Trim().ToLower().Equals(address.ToLower()))
+                {
+                    isFound = true;
+                    coordinate[0] = item.latitude;
+                    coordinate[1] = item.longitude;
+                    string coordString="geo:"+item.latitude+","+item.longitude;
+                    var geoUri = Android.Net.Uri.Parse(coordString);
+                    var mapIntent = new Intent(Intent.ActionView, geoUri);
+                    StartActivity(mapIntent);
+                }
+            }
+            if (!isFound)
+            {
+                Toast.MakeText(this, "Address Not found", ToastLength.Long);
+            }
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
@@ -190,8 +237,10 @@ namespace Week3Android
                     }
                 case Resource.Id.menuItem3:
                     {
-                        //About Us Menu
-                        // add your code  
+                        //User Profile Menu
+                        // add your code
+                        Intent intent = new Intent(this, typeof(UserProfileActivity));
+                        StartActivity(intent);
                         return true;
                     }
                 case Resource.Id.menuItem4:
@@ -225,5 +274,5 @@ namespace Week3Android
         }
     }
 
-    
+
 }

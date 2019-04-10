@@ -48,10 +48,16 @@
 		<TextView 
 		android:id="@+id/emailTxt"
 		android:layout_height="30dp"
-		android:layout_width="190dp"
+		android:layout_width="150dp"
 		android:textSize="15dp"
 		android:hint="No Data"
 		/>
+		<ImageView
+			android:id="@+id/mailImg"
+			android:layout_height="30dp"
+			android:layout_width="40dp"
+			android:background="@drawable/mail"
+			/>
 	
 		</LinearLayout>
 	
@@ -185,12 +191,18 @@
 		<TextView 
 		android:id="@+id/addressTxt"
 		android:layout_height="35dp"
-		android:layout_width="190dp"
+		android:layout_width="150dp"
 		android:textSize="15dp"
 		android:hint="No Data"
 		
 	/>
 		
+		<ImageView
+			android:id="@+id/locationImg"
+			android:layout_height="30dp"
+			android:layout_width="40dp"
+			android:background="@drawable/location1"
+			/>
 		</LinearLayout>
 	
 	<LinearLayout

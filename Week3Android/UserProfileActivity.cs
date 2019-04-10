@@ -18,7 +18,7 @@ namespace Week3Android
     {
         Button favBtn;
         ImageView userImageView;
-        EditText usernameTxt, emailTxt, ageTxt,passwordTxt, dobTxt, addressTxt, cityTxt, mrgStatusTxt, educationTxt, professionTxt;
+        EditText usernameTxt, emailTxt, ageTxt, passwordTxt, dobTxt, addressTxt, cityTxt, mrgStatusTxt, educationTxt, professionTxt;
         DBHelper dBHelper;
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -154,8 +154,10 @@ namespace Week3Android
                     }
                 case Resource.Id.menuItem3:
                     {
-                        //About Us Menu
-                        // add your code  
+                        //User Profile Menu
+                        // add your code
+                        Intent intent = new Intent(this, typeof(UserProfileActivity));
+                        StartActivity(intent);
                         return true;
                     }
                 case Resource.Id.menuItem4:
@@ -184,4 +186,7 @@ namespace Week3Android
                         return true;
                     }
             }
+            return base.OnOptionsItemSelected(item);
+        }
+    }
 }
