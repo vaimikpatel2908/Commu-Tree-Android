@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -52,7 +51,7 @@ namespace Week3Android
             this.userImage = image;
         }
 
-        public Person(int uId,int image,string username,int age,string email,string password,string dob,string address,string city,string maritalstatus,string education,string profession)
+        public Person(int uId,int image,string username,int age,string email,string password,string dob,string address,string city,string maritalstatus, string education, string profession)
         {
             this.uId = uId;
             this.userImage = image;
@@ -67,7 +66,6 @@ namespace Week3Android
             this.education = education;
             this.profession = profession;
         }
-
 
         public List<Person> seedData()
         {
@@ -84,15 +82,10 @@ namespace Week3Android
             return usersList;
         }
 
-
-
         //Not using Now
         public void addToList(Person person)
         {
             usersList.Add(person);
         }
-
-
-
     }
 }

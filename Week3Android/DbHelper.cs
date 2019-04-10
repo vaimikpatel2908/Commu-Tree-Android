@@ -90,9 +90,12 @@ namespace Week3Android
             {
                 while (cursor.MoveToNext())
                 {
-                    //System.Console.WriteLine(cursor.GetInt(0) + "---" + cursor.GetString(1) + "---" + cursor.GetString(2) + "---" + cursor.GetInt(3) + "---" + cursor.GetString(4));
+                    System.Console.WriteLine("Profession : ---"+cursor.GetString(10));
+                    System.Console.WriteLine("Education : ---" + cursor.GetString(11));
 
-                    personList.Add(new Person(cursor.GetInt(0), cursor.GetInt(1), cursor.GetString(2), cursor.GetInt(4), cursor.GetString(3), cursor.GetString(5), cursor.GetString(6),cursor.GetString(7), cursor.GetString(8), cursor.GetString(9), cursor.GetString(10), cursor.GetString(11)));
+                    System.Console.WriteLine(cursor.GetInt(0) + "---" + cursor.GetString(1) + "---" + cursor.GetString(2) + "---" + cursor.GetInt(4) + "---" + cursor.GetString(5) + "---" + cursor.GetString(6) + "---" + cursor.GetString(7) + "---" + cursor.GetString(8) + "---" + cursor.GetString(9) + "---" + cursor.GetString(11) + "---" + cursor.GetString(10) );
+
+                    personList.Add(new Person(cursor.GetInt(0), cursor.GetInt(1), cursor.GetString(2), cursor.GetInt(4), cursor.GetString(3), cursor.GetString(5), cursor.GetString(6),cursor.GetString(7), cursor.GetString(8), cursor.GetString(9), cursor.GetString(11), cursor.GetString(10)));
 
                 }
                 return personList;
@@ -131,7 +134,7 @@ namespace Week3Android
                     if (Email.Equals(email) && pwd.Equals(password))
                     {
                         System.Console.WriteLine(cursor.GetInt(0) + "---" + cursor.GetString(1) + "---" + cursor.GetString(2) + "---" + cursor.GetInt(3) + "---" + cursor.GetString(4));
-                        ShowAlert("Data Verified", "Login Successfull");
+                        //ShowAlert("Data Verified", "Login Successfull");
                         Toast.MakeText(context, "Login Successfull", ToastLength.Short).Show();
                         return id;
                     }
@@ -164,8 +167,8 @@ namespace Week3Android
                     IsExists = true;
 
                     //need to pass data here
-                    Person person = new Person(cursor.GetInt(0), cursor.GetInt(1), cursor.GetString(2), cursor.GetInt(4), cursor.GetString(3), cursor.GetString(5), cursor.GetString(6), cursor.GetString(7), cursor.GetString(8), cursor.GetString(9), cursor.GetString(10), cursor.GetString(11));
-                    //Console.WriteLine();
+                    Person person = new Person(cursor.GetInt(0), cursor.GetInt(1), cursor.GetString(2), cursor.GetInt(4), cursor.GetString(3), cursor.GetString(5), cursor.GetString(6), cursor.GetString(7), cursor.GetString(8), cursor.GetString(9), cursor.GetString(11), cursor.GetString(10));
+                    Console.WriteLine();
                     //ShowAlert("Data Verified", "Login Successfull");
                     return person;
 
@@ -195,7 +198,7 @@ namespace Week3Android
                 + ColumnCity + "='" + city + "'," + ColumnMaritalStatus + "='" + maritalStatus + "',"
                 + ColumnProfession + "='" + profession + "'," + ColumnEducation + "='" + education + "'" +
                 " where " + ColumnID + "=" + uID;
-            Console.WriteLine(updateQuery);
+            //Console.WriteLine(updateQuery);
             DbObj.ExecSQL(updateQuery);
             Toast.MakeText(context, "Data updated Successfully", ToastLength.Short).Show();
             //ShowAlert("Success", "Data updated successfully");
@@ -390,7 +393,7 @@ namespace Week3Android
             Random rnd = new Random();
             var id = rnd.Next(1, 1000);
 
-            var insertValue = "Insert into " + TableName + "(" + ColumnID + "," + ColumnImage + "," + ColumnName + "," + ColumnEmail + "," + ColumnAge + "," + ColumnPassword + "," + ColumnDob + "," + ColumnAddress + "," + ColumnCity + "," + ColumnMaritalStatus + "," + ColumnEducation + "," + ColumnProfession + ") values('" + id + "'," + getImage() + ",'" + username + "','" + emailID + "','" + age + "','" + password + "','"+dob+"','"+address+ "','" + city + "','" + maritalStatus + "','" + profession + "','" + education + "')";
+            var insertValue = "Insert into " + TableName + "(" + ColumnID + "," + ColumnImage + "," + ColumnName + "," + ColumnEmail + "," + ColumnAge + "," + ColumnPassword + "," + ColumnDob + "," + ColumnAddress + "," + ColumnCity + "," + ColumnMaritalStatus + "," + ColumnEducation + "," + ColumnProfession + ") values('" + id + "'," + getImage() + ",'" + username + "','" + emailID + "','" + age + "','" + password + "','"+dob+"','"+address+ "','" + city + "','" + maritalStatus + "','" + education + "','" + profession + "')";
             //ShowAlert("Data Inserted", "Id :" + id + "\nName :" + username + "\nEmail :" + emailID + "\nAge :" + age + "\nPassword :" + password);
 
             System.Console.WriteLine("MY SQL Insert " + insertValue);

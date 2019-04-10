@@ -38,7 +38,7 @@ namespace Week3Android
             addressTxt = FindViewById<EditText>(Resource.Id.addressTxt);
             cityTxt = FindViewById<EditText>(Resource.Id.cityTxt);
             mrgStatusTxt = FindViewById<EditText>(Resource.Id.mrgStatusTxt);
-            educationTxt = FindViewById<EditText>(Resource.Id.educaionTxt);
+            educationTxt = FindViewById<EditText>(Resource.Id.educationTxt);
             professionTxt = FindViewById<EditText>(Resource.Id.professionTxt);
             favBtn = FindViewById<Button>(Resource.Id.AddToFavorites);
 
@@ -103,6 +103,8 @@ namespace Week3Android
                         educationTxt.Enabled = false;
                         professionTxt.Enabled = false;
                         favBtn.Text = "Edit";
+                        Intent intent = new Intent(this, typeof(UserProfileActivity));
+                        StartActivity(intent);
                     }
                     catch (System.Exception ex)
                     {

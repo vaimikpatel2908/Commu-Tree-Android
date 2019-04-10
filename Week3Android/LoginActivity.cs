@@ -51,10 +51,12 @@ namespace Week3Android
             {
                 if(emailTxt.Text == "")
                 {
-                    dBHelper.ShowAlert("Verification Error", "Enter Email Id");
+                    Toast.MakeText(this, "Enter Email-Id", ToastLength.Long).Show();
+                    //dBHelper.ShowAlert("Verification Error", "Enter Email Id");
                 }else if(passwordTxt.Text=="")
                 {
-                    dBHelper.ShowAlert("Verification Error", "Enter Password");
+                    Toast.MakeText(this, "Enter Password", ToastLength.Long).Show();
+                    //dBHelper.ShowAlert("Verification Error", "Enter Password");
                 }
                 else
                 {
@@ -65,7 +67,7 @@ namespace Week3Android
                         ISharedPreferences prefs = PreferenceManager.GetDefaultSharedPreferences(this);
                         ISharedPreferencesEditor editor = prefs.Edit();
                         editor.PutInt("userId", userId);
-                        editor.Commit();    // applies changes synchronously on older APIs
+                        editor.Commit();    
                         editor.Apply();
 
                         Intent userlistScn = new Intent(this, typeof(UserListActivity));
@@ -74,7 +76,8 @@ namespace Week3Android
                     }
                     else
                     {
-                        dBHelper.ShowAlert("Error", "Username or password is wrong");
+                        Toast.MakeText(this, "Username or password is wrong", ToastLength.Long).Show();
+                        //dBHelper.ShowAlert("Error", "Username or password is wrong");
                     }
                 }
             };
