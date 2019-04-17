@@ -160,8 +160,8 @@ namespace Week3Android
                 email.PutExtra(Android.Content.Intent.ExtraCc, new string[] {
             "vaimikpatel2908@gmail.com"
         });
-                email.PutExtra(Android.Content.Intent.ExtraSubject, "Hello"+user.username);
-                email.PutExtra(Android.Content.Intent.ExtraText, "Hello "+ user.username+" This is mail from commu-tree application!");
+                email.PutExtra(Android.Content.Intent.ExtraSubject, "Hello "+user.username);
+                email.PutExtra(Android.Content.Intent.ExtraText, "Hello "+ user.username+" This is a mail from commu-tree application!");
                 email.SetType("message/rfc822");
                 Intent chooser = Intent.CreateChooser(email, "Send Mail");
                 StartActivity(chooser);
@@ -176,7 +176,6 @@ namespace Week3Android
 
         public void redirectToMap(string address)
         {
-            string[] coordinate = new string[2];
             Coordinates coordinates = new Coordinates();
 
             bool isFound = false;
@@ -185,12 +184,12 @@ namespace Week3Android
                 if (item.address.Trim().ToLower().Equals(address.ToLower()))
                 {
                     isFound = true;
-                    coordinate[0] = item.latitude;
-                    coordinate[1] = item.longitude;
-                    string coordString="geo:"+item.latitude+","+item.longitude;
+                    //string coordString="geo:"+item.latitude+","+item.longitude+"q=vaimik";
+                    string coordString = "geo:" + item.latitude + "," + item.longitude + "?q="+address;
                     var geoUri = Android.Net.Uri.Parse(coordString);
                     var mapIntent = new Intent(Intent.ActionView, geoUri);
-                    StartActivity(mapIntent);
+                    Intent mapchooser = Intent.CreateChooser(mapIntent, "Open Map");
+                    StartActivity(mapchooser);
                 }
             }
             if (!isFound)
